@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+    </style>
+    <title>The Color Game</title>
+</head>
+
+<body onload="play()">
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="top-text">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-4 col-md-2">
+                                <h1>
+                                    <p>THE</p>
+                                    <p>COLOR</p>
+                                    <p>GAME</p>
+                                </h1>
+                            </div>
+                            <div class="col-8 col-md-10">
+                                <h2>GUESS THE COLOR</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End header -->
+
+    <!-- Game section -->
+    <div class="game-sec">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 main-sec">
+                    <div clas="row">
+                        <div class="col">
+                            <div class="col-val">
+                                <h1><span id="colorval"></span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div id="box" class="col-3" onclick="boxSelected(this)">
+                        </div>
+                        <div id="box" class="col-3" onclick="boxSelected(this)">
+                        </div>
+                        <div id="box" class="col-3" onclick="boxSelected(this)">
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="row justify-content-center">
+                        <div id="box" class="col-3" onclick="boxSelected(this)">
+                        </div>
+                        <div id="box" class="col-3" onclick="boxSelected(this)">
+                        </div>
+                        <div id="box" class="col-3" onclick="boxSelected(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 left-sec">
+                    <div class="row">
+                        <div class="col">
+                            <button class="help-btn" onclick="openHelp()">Help</button>
+                        </div>
+                    </div>
+                    <div class="row left-btm">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>ROUND <span id="round-no">1</span> OF 10</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="score-card">
+                                        <ul>
+                                            <li>
+                                                <span>WIN</span>
+                                                <div class="card">
+                                                    <p id="wincount"></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span>LOSE</span>
+                                                <div class="card">
+                                                    <p id="losecount"></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="win-sec d-flex align-items-center justify-content-center">
+                                        <h1 id="displaywin"> </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button onclick="play();reset()">Play Again</button>
+                                </div>
+                                <div class="col-6">
+                                    <button onclick="reset()">Reset Score</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Game section  -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+
+                    <!-- <img src="./images/beeinnovation.jpg"> -->
+                    <span>Designed and Developed by Bee Innovations®</span></li>
+
+                </div>
+                <div class="col-md-4 d-flex align-items-center justify-content-end">
+
+                    <span>All Rights Reserved. © 2021 | Privacy Policy</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Help-Popup -->
+
+    <div id="help" class="help-popup">
+        <h2>HOW TO PLAY</h2>
+        <h3>GUESS THE COLOR BY ITS "RGB" VALUE</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <img src="images/img_rgb.jpg">
+                </div>
+                <div class="col-lg-5">
+                    <img src="images/img3-rgb.png">
+                </div>
+            </div>
+            <div class="row rgb-ex">
+                <div class="col-1">
+                    <p>R:</p>
+                </div>
+                <div class="col-1">
+                    <span class="red">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(255,0,0)</p>
+                </div>
+                <div class="col-1">
+                    <p>White:</p>
+                </div>
+                <div class="col-1">
+                    <span class="white">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(255,255,255)</p>
+                </div>
+                <div class="col-1">
+                    <p>Cyan:</p>
+                </div>
+                <div class="col-1">
+                    <span class="cyan">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(0,255,255)</p>
+                </div>
+            </div>
+            <div class="row rgb-ex">
+                <div class="col-1">
+                    <p>G:</p>
+                </div>
+                <div class="col-1">
+                    <span class="green">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(0,255,0)</p>
+                </div>
+                <div class="col-1">
+                    <p>Black:</p>
+                </div>
+                <div class="col-1">
+                    <span class="black">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(0,0,0)</p>
+                </div>
+                <div class="col-1">
+                    <p>Magenta:</p>
+                </div>
+                <div class="col-1">
+                    <span class="magenta">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(255,0,255)</p>
+                </div>
+            </div>
+            <div class="row rgb-ex">
+                <div class="col-1">
+                    <p>B:</p>
+                </div>
+                <div class="col-1">
+                    <span class="blue">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(0,0,255)</p>
+                </div>
+                <div class="col-1">
+                    <p>Grey:</p>
+                </div>
+                <div class="col-1">
+                    <span class="grey">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(150,150,150)</p>
+                </div>
+                <div class="col-1">
+                    <p>Yellow:</p>
+                </div>
+                <div class="col-1">
+                    <span class="yellow">----</span>
+                </div>
+                <div class="col-2">
+                    <p>RGB(255,255,0)</p>
+                </div>
+            </div>
+        </div>
+        <h5>RGB value = Intensity value R,G,B on a scale of 0 to 255<h5>
+                <button class="close" onclick="closeHelp()">X</button>
+    </div>
+
+
+
+    <script type="text/javascript" src="colorgame.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.navbar{
+    padding-top:50px;
+    align-items: flex-end !important;
+    align-content: flex-end !important;
+}
+.header{
+    font-family: 'Barlow', sans-serif;
+    background-image: url(./images/top.png);
+}
+
+.header .top-text{
+
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header .top-text h1{
+    padding-top: 10px;
+    padding-bottom:10px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 30px;
+    color:white;
+    background-color: #04396C;
+    border: 2px solid white;
+    text-shadow: 0px 0px 5px black;
+  
+}
+
+.header .top-text h2{
+    color: white;
+    font-size: 49px;
+    font-weight: 700;
+    text-align: right;
+
+}
+
+.header .top-text p{
+    margin:0px;
+}
+.game-sec{
+    margin-top:36px;
+}
+.game-sec .main-sec{
+    padding: 0px 100px;
+    padding-bottom:58px;
+}
+@media only screen and (max-width: 768px){
+    .game-sec .main-sec{ padding:0px;}
+}   
+.main-sec .col-val{
+text-transform: uppercase;
+color:#04396C;;
+text-align: center;
+width: 100%;
+border: 2px solid #04396C;
+border-radius: 10px;
+margin-bottom: 30px;
+
+}
+
+.game-sec .left-sec{
+
+    background-color:#04396C;
+    border-top-left-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+@media only screen and (max-width: 768px){
+
+    .game-sec .left-sec{
+        padding-top:0px; border-radius: 0px;
+    }
+    .game-sec .left-sec .win-sec{
+        display: none!important;
+    }
+    .game-sec .left-sec .left-btm{
+        padding: 30px!important;
+    }
+    #box{height: 108px!important;}
+}
+#box{
+    
+    /* box-shadow: 0px 0px 0px 2px grey; */
+    border-radius: 35px;
+    height:144px;
+    background: grey;  
+    margin: 12px;   
+ 
+}
+.game-sec .left-sec .left-btm{
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.game-sec .left-sec .left-btm h2{
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 4px white;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.game-sec .left-sec  .score-card{
+    padding-top: 15px;
+    padding-left:15px;
+    padding-right: 15px;
+}
+
+.game-sec .left-sec .score-card ul{
+
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding-left: 0px;
+}
+
+.game-sec .left-sec .score-card ul li{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.game-sec .left-sec .score-card ul li span{
+    color: white;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.game-sec .left-sec .score-card h4{
+
+    color:white;
+    text-align: left;
+    padding-top: 32px;
+}
+
+.game-sec .left-sec .score-card .card{
+
+    background-color:white;
+    border-radius: 10px;
+    width: 80px;
+    height:80px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.game-sec .left-sec .score-card .card p{
+
+    font-size: 48px;
+    text-align: center;
+    color: black;
+}
+
+.game-sec .left-sec .win-sec{
+    height:160px;
+    color:white;
+    text-align: center;
+    padding-top:85px;
+    padding-bottom:85px;
+}
+.game-sec .left-sec .win-sec h1{
+    font-weight: 700;
+}
+
+.game-sec .left-sec button{
+
+
+    padding:5px 20px;
+    color:white;
+    box-shadow: 0px 0px 4px white;
+    border-radius:10px;
+    width: 100%;
+    font-size: 13px;
+    background: transparent;
+    font-weight: bold;
+    border:none;
+
+}
+
+.game-sec .left-sec button:hover {
+
+    border:1px solid white;
+}
+.game-sec .left-sec .help-btn{
+    position:absolute;
+    right:15px;
+    text-align:right;
+    border:none;
+    width:0px;
+    box-shadow: none;
+}
+.game-sec .left-sec .help-btn:hover{
+    background-color: transparent;
+    border:none;
+    color:gray;
+}
+.game-sec .left-sec .help-btn:focus{
+    
+    outline: none;
+}
+
+.footer {
+    background-color: #04396C;
+    color:grey;
+    padding:20px 0px;
+}
+
+.footer .row{
+    padding-left:30px;
+    padding-right: 30px;
+}
+.footer img{
+
+    width: 14%;
+    margin-right: 18px;
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+
+.help-popup{
+    position: absolute;
+    top:27%;
+    right:15%;
+    left:15%;
+    background-color: white;
+    color:#04396C;
+    padding-top:30px;
+    padding-bottom: 10px;
+    padding-left:10px;
+    padding-right: 10px;
+    border: 1px solid #04396C;
+}
+@media only screen and (max-width: 768px){
+
+    .help-popup{
+        position: absolute;
+        width:70%;
+        background-color: white;
+        color:#04396C;   
+    }
+    .help-popup img{
+        width: 100%;
+        
+    }
+    .rgb-ex{
+        display:none;
+    }
+}
+.help-popup img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+    width:70%;
+}
+.help-popup p{
+    padding-top:5px;
+    font-size: 13px;
+}
+.help-popup h2{ font-size:18px; font-weight: bold;}
+.help-popup h3{font-size:16px;}
+.help-popup h2, .help-popup h3 , .help-popup h5 {
+
+    text-align: center;
+    color:#04396C;
+}
+.help-popup h5{
+    font-size: 12px;
+}
+.help-popup button{
+    position: absolute;
+    top:0px;
+    right:0px;
+    border:1px solid #04396C;
+    font-size: 16px;
+    color:#04396C;
+    padding: 10px;
+
+
+}
+
+
+.red{
+    
+    border:red;
+    background-color: red;
+    color:red;
+}
+.blue{
+    border:blue;
+    background-color:blue;
+    color:blue;
+}
+.green{
+    border: green;
+    background-color: green;
+    color: green;
+}
+
+.black{
+    border:black;
+    background-color: black;
+    color:black;
+}
+.white{
+    border:0.5px solid black;
+    background-color: white;
+    color:white;
+}
+.cyan{
+    border: cyan;
+    background-color: cyan;
+    color:cyan;
+}
+
+.magenta{
+    border: magenta;
+    background-color: magenta;
+    color:magenta;
+}
+.yellow{
+    border:yellow;
+    background-color: yellow;
+    color:yellow;
+}
+.grey{
+    border: rgb(150,150,150);
+    background-color: rgb(150,150,150);
+    color: rgb(150,150,150);
+}
